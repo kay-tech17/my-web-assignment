@@ -1,32 +1,16 @@
 function magicMove() {
-    // This finds the button
+    // 1. Find the button and the page body
     const btn = document.getElementById('magicBtn');
+    const body = document.body;
     
-    // This changes the background color randomly
-    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-    document.body.style.background = randomColor;
-
-    // This changes the text inside the button
+    // 2. Generate a random color
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#FF3385', '#FFB533'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    
+    // 3. Apply the magic!
+    body.style.backgroundColor = randomColor;
     btn.innerHTML = "✨ MAGIC! ✨";
     
-    // This makes the button grow a little
-    btn.style.transform = "scale(1.1)";
-    setTimeout(() => { btn.style.transform = "scale(1)"; }, 200);
-}
-
-button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: #2980b9;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    // 4. Console log (so we can see it working in the background)
+    console.log("Color changed to: " + randomColor);
 }
