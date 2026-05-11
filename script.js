@@ -14,3 +14,19 @@ function magicMove() {
     setTimeout(() => { btn.style.transform = "scale(1)"; }, 200);
 }
 
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
